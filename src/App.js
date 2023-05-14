@@ -1,16 +1,14 @@
-
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Productos from './components/Productos/ItemListContainer';
+import Rutas from './routes/Rutas';
 
-function App() {
+
+
+function App () {
   return (
     <div className="App">
-      <Navbar/>
-      <Productos/>
+      <Rutas/>
     </div>
   );
 }
 
-
-export default App;
+  export default App;

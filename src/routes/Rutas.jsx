@@ -5,6 +5,7 @@ import Categoria from '../pages/ItemDetailContainer'
 import Checkout from '../pages/Checkout'
 import ItemDetail from '../pages/ItemListContainer'
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Navbar/footer'
 
 const Rutas = () => {
   return (
@@ -15,8 +16,8 @@ const Rutas = () => {
             <Route path='/checkout' element={<Checkout/>} />
             <Route path='/Category/item/:id' element={<ItemDetail/>} />
             <Route path='/Category' element={<Categoria/>} />
-        
         </Routes>
+        <Footer/>
     </BrowserRouter>
   )
 }

@@ -8,21 +8,18 @@ const Categoria = () => {
             imagen: <img src="./img/motosierra.jpg" alt="imagen de motosierra"/>,
             titulo: "Motosierra",
             precio: "$50000",
-            descripcion: "Esto es una Motosierra",
             },
         {
             id: "2",
-            imagen: <img src="./img/compresor.jpg" alt="imagen de compresor"/>,
-            titulo: "Compresor",
+            imagen: <img src="./img/generador.jpg" alt="imagen de generador"/>,
+            titulo: "Generador",
             precio: "$30000",
-            descripcion: "Esto es un compresor",
             },
         {
             id: "3",
-            imagen: <img src="./img/Pulverizador.jpg" alt="imagen de un pulverizador"/>,
-            titulo: "Pulverizador",
+            imagen: <img src="./img/fumigador.jpg" alt="imagen de un fumigador"/>,
+            titulo: "Fumigador",
             precio: "$20000",
-            descripcion: "Esto es un Pulverizador",
             }
         ]
  

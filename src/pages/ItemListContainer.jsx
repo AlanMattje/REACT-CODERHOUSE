@@ -6,27 +6,40 @@ const ItemListContainer = () => {
   const {id} = useParams();
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(true);
+
+  const [quantity, setQuantity] = useState(1);
+
+  const subir = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const bajar = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   const items = [
     {
         id: "1",
-        imagen: <img src="./img/motosierra.jpg" alt="imagen de motosierra"/>,
+        imagen: <img src="/img/motosierra.jpg" alt="imagen de motosierra"/>,
         titulo: "Motosierra",
         precio: "$50000",
         descripcion: "Esto es una Motosierra",
         },
     {
         id: "2",
-        imagen: <img src="./img/motosierra.jpg" alt="imagen de motosierra"/>,
-        titulo: "Motosierra",
-        precio: "$50000",
-        descripcion: "Esto es una Motosierra",
+        imagen: <img src="/img/generador.jpg" alt="imagen de generador"/>,
+        titulo: "Generador",
+        precio: "$30000",
+        descripcion: "Esto es un generador",
         },
     {
         id: "3",
-        imagen: <img src="./img/motosierra.jpg" alt="imagen de motosierra"/>,
-        titulo: "Motosierra",
-        precio: "$50000",
-        descripcion: "Esto es una Motosierra",
+        imagen: <img src="/img/fumigador.jpg" alt="imagen de un fumigador"/>,
+        titulo: "Fumigador",
+        precio: "$20000",
+        descripcion: "Esto es un fumigador",
         }
     ];
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -51,7 +64,11 @@ const ItemListContainer = () => {
           <h1>{item.titulo}</h1>
           <h1>{item.precio}</h1>
           <p>{item.descripcion}</p>
-          <h1>ACA VA MI CONTADOR</h1>
+          <div className='cantidades'>
+          <span>{quantity}</span>
+          <button onClick={subir}>+</button>
+          <button onClick={bajar}>-</button>
+          </div>
           <button onClick={agregarAlCarrito} >Agregar al carrito </button>
           </div>
           </div>
